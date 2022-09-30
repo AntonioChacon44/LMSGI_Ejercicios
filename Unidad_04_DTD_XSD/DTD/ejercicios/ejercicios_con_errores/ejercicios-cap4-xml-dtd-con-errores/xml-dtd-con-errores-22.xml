@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaCompra [
+  <!ELEMENT listaCompra (item*)>
+  <!ELEMENT item (#PCDATA)>
+  <!ATTLIST item cantidad CDATA #REQUIRED>
+]>
+
+<listaCompra>
+  <item cantidad = "12 de litros"></item>
+</listaCompra>
