@@ -1,0 +1,28 @@
+<!ELEMENT fruteria (fruta | precio | localizacion)*>
+<!ELEMENT fruta EMPTY>
+<!ATTLIST fruta nombre ID #REQUIRED
+                caducidad NMTOKENS #REQUIRED
+                calorias NMTOKEN #REQUIRED
+                conservantes (contiene | noContiene) #FIXED "noContiene">
+
+<!ELEMENT precio (nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST precio precioImportacion NMTOKENS #REQUIRED
+                 precioeExportacion NMTOKENS #REQUIRED
+                 tipoPago (tarjeta | efectivo) #REQUIRED
+                 IVA CDATA #IMPLIED>
+
+<!ELEMENT localizacion (productoNacional, productoExtranjero)>
+<!ATTLIST localizacion estado ID #REQUIRED>
+<!ELEMENT productoNacional (#PCDATA)*>
+<!ELEMENT productoExtranjero (#PCDATA)*>
+<!ENTITY  % maduracion "<!ATTLIST localizacion maduracion CDATA #IMPLIED>">
+%maduracion;
+
+
+
+
+
+
+
+

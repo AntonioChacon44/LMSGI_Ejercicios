@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fruteria SYSTEM "pruebaexamen.dtd"[
+<!ENTITY excusa  "Esto es una excusa">
+
+]>
+<fruteria>
+    <fruta nombre="Naranja" caducidad="26-07-2023" calorias="250" conservantes="noContiene" />
+    <fruta nombre="Platano" caducidad="01-12-2022" calorias="290" conservantes="noContiene" />
+    <fruta nombre="Pera" caducidad="12-11-2022" calorias="120" conservantes="noContiene" />
+
+    <precio precioImportacion="5 euros" precioeExportacion="8 euros" tipoPago="tarjeta">
+        <nombre>Naranja</nombre>
+    </precio>
+
+    <precio precioImportacion="3 euros" precioeExportacion="7 euros" tipoPago="tarjeta">
+        <nombre>Platano</nombre>
+    </precio>
+
+    <precio precioImportacion="2 euros" precioeExportacion="2.80 euros" tipoPago="tarjeta">
+        <nombre>Pera</nombre>
+    </precio>
+    
+    <localizacion maduracion="Estan maduras" estado="EStados_unidos">
+        <productoNacional></productoNacional>
+        <productoExtranjero></productoExtranjero>
+    </localizacion>
+
+    <localizacion maduracion="Estan maduras" estado="Estados_Unidos">
+        <productoNacional></productoNacional>
+        <productoExtranjero></productoExtranjero>
+    </localizacion>
+
+
+
+</fruteria>

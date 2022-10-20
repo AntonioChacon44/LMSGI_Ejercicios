@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales SYSTEM "pruebaExamen.dtd">
+<animales granja="Granja de Bartolo">
+    <tipo nombre="Pedro" raza="pinguino" peligroso="si" />
+    <tipo nombre="Manolo" raza="cobra" peligroso="si" sexo="macho"/>
+    <tipo nombre="Manola" raza="serpiente" peligroso="si" sexo="hembra"/>
+    <tipo nombre="Rodolfo" raza="caballo" peligroso="no" sexo="macho"/>
+    <tipo nombre="Josefa" raza="yegua" peligroso="no" sexo="hembra"/>
+    <nombre nombre="Rodolfo">
+        <raza tipo="caballo" peligroso="no" sexo="macho"/>
+        <color nombre="Azul" />
+        <color nombre="Verde" />
+        <reproduccion>
+            <nombres nombre="Rodolfo Josefa" />
+            <viviparo/>
+        </reproduccion>
+    </nombre>
+    <nombre nombre="Manolo">
+        <raza tipo="serpiente" peligroso="si" sexo="macho"/>
+        <color nombre="amarilla" />
+        <color nombre="rosa" />
+        <reproduccion>
+            <nombres nombre="Manolo Manola" />
+            <oviparo/>
+        </reproduccion>
+        <bioma>
+            <calido/>
+        </bioma>
+    </nombre>
+    <compatibles tipos="caballo yegua " />
+    <compatibles tipos="serpiente cobra" />
+</animales>
+
+
+<!ELEMENT animales (#PCDATA | tipo | nombre | compatibles)*>
+<!ATTLIST animales granja CDATA #FIXED "Granja de Bartolo">
+<!ENTITY % animal "peligroso (si | no) #REQUIRED
+                sexo (hembra | macho) #IMPLIED">
+<!ELEMENT tipo EMPTY>
+<!ATTLIST tipo nombre ID #REQUIRED
+                raza ID #REQUIRED
+                %animal;>
+<!ELEMENT nombre (raza, color+, reproduccion, bioma?)>
+<!ATTLIST nombre nombre IDREF #REQUIRED>
+<!ELEMENT raza EMPTY>
+<!ATTLIST raza tipo IDREF #REQUIRED
+                %animal;>
+<!ELEMENT color EMPTY>
+<!ATTLIST color nombre CDATA #REQUIRED>
+<!ELEMENT reproduccion (nombres, (oviparo | viviparo))>
+<!ELEMENT nombres EMPTY>
+<!ATTLIST nombres nombre IDREFS #REQUIRED>
+<!ELEMENT oviparo (#PCDATA)>
+<!ELEMENT viviparo (#PCDATA)>
+<!ELEMENT bioma (calido | frio)>
+<!ELEMENT calido EMPTY>
+<!ELEMENT frio EMPTY>
+<!ELEMENT compatibles EMPTY>
+<!ATTLIST compatibles tipos IDREFS #REQUIRED>

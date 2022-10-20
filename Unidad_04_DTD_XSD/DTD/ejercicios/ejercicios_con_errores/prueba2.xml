@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales SYSTEM "prueba2.dtd">
+<animales>
+
+    <animal nombre="Elefante" raza="Leal" />
+    <animal nombre="Leopardo" raza="Leal" pureza="Si"/>
+    <animal nombre="Pinguino" raza="Leal" />
+    <animal nombre="Koala" raza="Leal" />
+
+    <tipos nombre="Elefante" identificacion="4958673">
+        <hostilidad>Neutra</hostilidad>
+    </tipos>
+    
+    <tipos nombre="Leopardo" identificacion="0000000">
+        <hostilidad>Hostil</hostilidad>
+    </tipos>
+
+    <tipos nombre="Pinguino" identificacion="1265923">
+        <hostilidad>Neutra</hostilidad>
+    </tipos>
+
+    <tipos nombre="Koala" identificacion="9283745">
+        <hostilidad>Pasiva</hostilidad>
+    </tipos>
+
+    <reproduccion nombre="Elefante">
+        <sexo>
+            Masculino
+        </sexo>
+        <viviparos/>
+    </reproduccion>
+
+    <reproduccion nombre="Leopardo">
+        <sexo>
+            Femenino
+        </sexo>
+        <viviparos/>
+    </reproduccion>
+
+    <reproduccion nombre="Pinguino">
+        <sexo>
+            Femenino
+        </sexo>
+        <oviparos/>
+    </reproduccion>
+
+    <reproduccion nombre="Koala">
+        <sexo>
+            Femenino
+        </sexo>
+        <viviparos/>
+    </reproduccion>
+
+</animales>

@@ -1,0 +1,22 @@
+<!ELEMENT animales (#PCDATA | animal | tipos | reproduccion)*>
+<!ELEMENT animal EMPTY>
+<!ATTLIST animal nombre ID #REQUIRED
+                 raza CDATA #FIXED "Leal"
+                 amistad IDREFS #REQUIRED
+                 pureza CDATA #IMPLIED
+
+                 >
+<!ELEMENT tipos (hostilidad, progenitores+)>
+<!ATTLIST tipos nombre IDREF #REQUIRED
+                identificacion NMTOKENS #REQUIRED
+                >
+<!ELEMENT hostilidad (#PCDATA)>
+<!ELEMENT progenitores (#PCDATA)>
+<!ELEMENT reproduccion (sexo, (oviparos? , viviparos?))>
+<!ATTLIST reproduccion nombre IDREF #REQUIRED>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT oviparos EMPTY>
+<!ELEMENT viviparos EMPTY>
+<!ENTITY % infoadicional "<!ATTLIST tipos bioma (Caluroso | Congelado | Bosque) #REQUIRED
+                                          localizacion (Importado | Exportado) #IMPLIED>">
+%infoadicional;

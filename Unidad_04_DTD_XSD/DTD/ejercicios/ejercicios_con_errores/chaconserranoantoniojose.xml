@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales SYSTEM "chaconserranoantoniojose.dtd">
+<animales>
+
+    <animal nombre="Elefante" raza="Leal" amistad="Koala" />
+    <animal nombre="Lince" raza="Leal" amistad="Pinguino" pureza="100%"/>
+    <animal nombre="Pinguino" raza="Leal" amistad="Koala" />
+    <animal nombre="Koala" raza="Leal" amistad="Pinguino" />
+
+    <tipos nombre="Elefante" identificacion="4958673" bioma="Caluroso" localizacion="Exportado">
+        <hostilidad>Neutra</hostilidad>
+        <progenitores>Madre de especie africana longuevidad de 125 años</progenitores>
+        <progenitores>Padre de especie africana longuevidad de 104 años</progenitores>
+    </tipos>
+    
+    <tipos nombre="Lince" identificacion="0000000" bioma="Caluroso" localizacion="Exportado">
+        <hostilidad>Hostil</hostilidad>
+        <progenitores>Madre de especie española longuevidad de 56 años</progenitores>
+        <progenitores>Padre de especie africana longuevidad de 59 años</progenitores>
+    </tipos>
+
+    <tipos nombre="Pinguino" identificacion="1265923" bioma="Congelado">
+        <hostilidad>Neutra</hostilidad>
+        <progenitores>Madre de especie ecuatoriana longuevidad de 32 años</progenitores>
+        <progenitores>Padre de especie ecuatoriana longuevidad de 31 años</progenitores>
+    </tipos>
+
+    <tipos nombre="Koala" identificacion="9283745" bioma="Bosque"> 
+        <hostilidad>Pasiva</hostilidad>
+        <progenitores>Madre de especie colombina longuevidad de 60 años</progenitores>
+        <progenitores>Padre de especie colombina longuevidad de 55 años</progenitores>
+    </tipos>
+
+    <reproduccion nombre="Elefante">
+        <sexo>
+            Masculino
+        </sexo>
+        <viviparos/>
+    </reproduccion>
+
+    <reproduccion nombre="Lince">
+        <sexo>
+            Femenino
+        </sexo>
+        <viviparos/>
+    </reproduccion>
+
+    <reproduccion nombre="Pinguino">
+        <sexo>
+            Femenino
+        </sexo>
+        <oviparos/>
+    </reproduccion>
+
+    <reproduccion nombre="Koala">
+        <sexo>
+            Femenino
+        </sexo>
+        <viviparos/>
+    </reproduccion>
+
+</animales>
